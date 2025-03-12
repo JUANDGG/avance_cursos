@@ -1,0 +1,20 @@
+La Aop o programacion orientada a aspectos
+Esa es un paradigma de la programacion que permite que el
+ codigo se mas reutilizable compacto ,desacoplado , modular
+ permite desacomplar codigo que no tiene nada que ver con la logica de negocio
+ permite interceptar metodos atravez de puntos de corte
+
+Aspect (@Aspect)	Clase que contiene lógica transversal (como logs o seguridad).
+Advice (@Before, @After, etc.)	Acción que se ejecuta antes, después o alrededor de un método.
+Join Point	Punto en la ejecución del programa donde se aplica AOP (ej. llamada a un método).
+Pointcut (@Pointcut)	Expresión que define en qué métodos se aplica AOP.
+
+
+
+
+Característica	AOP (Aspect-Oriented Programming)	Interceptors (HandlerInterceptor)
+Propósito	Aplicar lógica transversal a nivel de métodos y clases.	Interceptar peticiones HTTP antes de llegar a los controladores.
+Nivel de Aplicación	Se aplica a la lógica de negocio (servicios, repositorios, etc.).	Se aplica a las solicitudes HTTP en los controladores.
+Uso común	Logs, seguridad, transacciones, manejo de errores en toda la lógica de negocio.	Autenticación, autorización, manipulación de solicitudes y respuestas.
+Ejemplo de aplicación	Interceptar todos los métodos de un servicio para registrar logs.	Bloquear el acceso a ciertos endpoints según el usuario.
+Cómo se configura	@Aspect, @Before, @After, @Around en clases de negocio.	HandlerInterceptor con preHandle(), postHandle(), afterCompletion() en el flujo HTTP.

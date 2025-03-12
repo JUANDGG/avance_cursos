@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Juan Pérez",
+    "email": "juan.perez@example.com",
+    "age": 25,
+    "role": "admin"
+  },
+  {
+    "id": 2,
+    "name": "María López",
+    "email": "maria.lopez@example.com",
+    "age": 30,
+    "role": "user"
+  },
+  {
+    "id": 3,
+    "name": "Carlos Gómez",
+    "email": "carlos.gomez@example.com",
+    "age": 28,
+    "role": "moderator"
+  },
+  {
+    "id": 4,
+    "name": "Ana Torres",
+    "email": "ana.torres@example.com",
+    "age": 22,
+    "role": "user"
+  }
+]

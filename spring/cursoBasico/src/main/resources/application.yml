@@ -1,0 +1,25 @@
+uri-example: avance.org
+
+spring:
+  application:
+      name : cursoBasico
+  mvc:
+    throw-exception-if-no-handler-found: true
+  web:
+    resources:
+      add-mappings: false
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/users
+    username: root
+    password: 123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto : update
+    database-platform : org.hibernate.dialect.MySQL8Dialect
+
+
+server :
+  port: 8081

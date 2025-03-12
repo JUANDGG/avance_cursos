@@ -1,0 +1,31 @@
+<!doctype html>
+<!--se le especifica el xmlns la ruta de la pagina de thymeale-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--ya podriamos usar el th:como vamos a renderizar el atributo = ${nombre del atributo que le pasamos en el controller o servlet}}-->
+    <title th:text = "${title}"></title>
+</head>
+<body>
+    <!--esto me lleva directamente ala ruta del 404 pero en la url me muestra la plantilla cosa que no es tan recomendable hacer-->
+    <a th:href = "@{/404.html}">page error</a>
+    <a th:href = "@{'api/v1/params?= + ${variable prueba}'}">page error</a>
+    <!--con este if decido si mostrar la tabla o no con los datos usando thymyleaf-->
+    <table th:if="${users.size()!=0}" >
+        <thead>
+            <th>name</th>
+            <th>email</th>
+        </thead>
+        <tbody>
+            <tr th:each = "user : ${users}">
+            <td  th:text="${user.name}"></td>
+            <td th:text="${user.email}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+</body>
+</html>
