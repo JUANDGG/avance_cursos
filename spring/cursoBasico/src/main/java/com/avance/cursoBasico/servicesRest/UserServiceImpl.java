@@ -16,7 +16,6 @@ public class UserServiceImpl {
         this.userRepository = userRepository;
     }
 
-
     public List<UserDto> getAllUsers () {
         List<UserModel> users =userRepository.findAll();
         return  users.stream().map(UserDto::toDto).collect(Collectors.toList()) ;

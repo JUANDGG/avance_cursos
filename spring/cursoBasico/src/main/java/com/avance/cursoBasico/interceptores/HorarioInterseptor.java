@@ -13,10 +13,11 @@ import java.util.Map;
 
 @Component("mesa-ayuda-interceptor")
 public class HorarioInterseptor implements HandlerInterceptor {
-
-
+    
+    
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+        //tomo la hora actual en la que se envia la peticion al servidor y dependiendo de la hora le doy acceso o no
         Calendar calendar = Calendar.getInstance();
         int hour = calendar.get(Calendar.HOUR_OF_DAY);
         if (hour >= 16) {
