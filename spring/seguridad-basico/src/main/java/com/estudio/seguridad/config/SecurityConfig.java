@@ -14,7 +14,7 @@ import org.springframework.security.web.authentication.AuthenticationSuccessHand
 //la anotacion configuration es un contenedor de beans
 @Configuration
 //con esta anotacion le decimos a sprring  security que vamos a configurar la seguridad de nuestra aplicacion
-@EnableWebSecurity
+//@EnableWebSecurity
 public class SecurityConfig {
     @Bean
     /*la security flite chain es una interfaz que lo que tiene 2 cosas , una metodo que retorna 
@@ -33,7 +33,7 @@ public class SecurityConfig {
                             path.requestMatchers("/api/sin-seguridad")
                             .permitAll()
                             .anyRequest()
-                            .authenticated()   
+                            .authenticated()
                         )
                         //para habilitar el login de spring security el del front end
                         .formLogin(form -> 
@@ -70,6 +70,8 @@ public class SecurityConfig {
                                 - none() : inabilita la proteccion contra la fijacion de sesion
 
                               */
+
+
                               .sessionFixation().migrateSession() // Protege contra ataques de fijación de sesión
                               .sessionConcurrency(concurrency -> concurrency
                                       .maximumSessions(1) // Solo una sesión por usuario

@@ -42,17 +42,8 @@ public class UserModel {
     @Column(nullable = false)
     private String email ;
 
-
     @Column(nullable = false)
     private String password;
 
-   /*  
-    @ManyToMany(fetch = FetchType.EAGER,targetEntity = RoleModel.class,cascade = CascadeType.ALL)
-    @JoinTable(
-        name = "user_role", // Nombre de la tabla intermedia
-        joinColumns = @JoinColumn(name = "id_role"), // Columna que referencia a Role
-        inverseJoinColumns = @JoinColumn(name = "id_user") // Columna que referencia a user
-    ) */
-    //private List<RoleModel> role ;
     
 }

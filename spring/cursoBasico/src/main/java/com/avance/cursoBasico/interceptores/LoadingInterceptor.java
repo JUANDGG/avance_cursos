@@ -10,6 +10,7 @@ import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
 //creo mi interceptor para interceptar perticiones http antes o depues de ser enviadas
+
 @Component("loadingInterceptor")
 public class LoadingInterceptor implements HandlerInterceptor {
 

@@ -1,10 +1,12 @@
-package com.estudio.seguridadConJwt.Service;
+package com.estudio.seguridadConJwt.Service.permissions.impl;
 
 import org.springframework.stereotype.Service;
 
+import com.estudio.seguridadConJwt.Service.permissions.PermissionService;
 import com.estudio.seguridadConJwt.models.PermissionModel;
 import com.estudio.seguridadConJwt.models.RoleModel;
 import com.estudio.seguridadConJwt.pojo.DTO.PermissionDto;
+import com.estudio.seguridadConJwt.pojo.mappers.PermissionMapper;
 import com.estudio.seguridadConJwt.repositories.PermissionRepository;
 import com.estudio.seguridadConJwt.repositories.RoleRepository;
 
@@ -28,7 +30,7 @@ public class PermissionServiceImpl  implements PermissionService{
                 .orElseThrow(() -> new RuntimeException("Role not found"));
 
         // convertir DTO a modelo con el role obtenido
-        PermissionModel permissionModel = PermissionDto.toModel(permissionDto, roleModel);
+        PermissionModel permissionModel = PermissionMapper.toModel(permissionDto, roleModel);
 
         // Guardar en la base de datos
         permissionRepository.save(permissionModel);

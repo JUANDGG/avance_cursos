@@ -3,7 +3,7 @@ package com.estudio.seguridadConJwt.controllers;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.estudio.seguridadConJwt.Service.PermissionService;
+import com.estudio.seguridadConJwt.Service.permissions.PermissionService;
 import com.estudio.seguridadConJwt.pojo.DTO.PermissionDto;
 
 import org.springframework.http.ResponseEntity;

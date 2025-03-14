@@ -3,8 +3,8 @@ package com.estudio.seguridadConJwt.controllers;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.estudio.seguridadConJwt.Service.RoleService;
-import com.estudio.seguridadConJwt.pojo.DTO.RoleDto;
+import com.estudio.seguridadConJwt.Service.roles.RoleService;
+import com.estudio.seguridadConJwt.pojo.DTO.role.RoleDto;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

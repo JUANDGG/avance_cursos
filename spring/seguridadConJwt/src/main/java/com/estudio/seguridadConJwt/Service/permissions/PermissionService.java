@@ -1,4 +1,4 @@
-package com.estudio.seguridadConJwt.Service;
+package com.estudio.seguridadConJwt.Service.permissions;
 
 import com.estudio.seguridadConJwt.pojo.DTO.PermissionDto;
 
